@@ -2,7 +2,7 @@
   "products" : [
     {
         "id" : "1",
-        "name" : "bag",
+        "name" : "Ankle Boots",
         "categoryId" : "1",
         "description" : "good material",
         "price" : 20,
@@ -15,8 +15,17 @@
         "description" : "good material",
         "price" : 33,
         "quantity" : 5
+    },
+
+    {
+      "id" : "3",
+      "name" : "bag",
+      "categoryId" : "1",
+      "description" : "good material",
+      "price" : 20,
+      "quantity" : 12
     }
-    ],  
+  ],
   "categories" : [
     {
         "id" : "1",

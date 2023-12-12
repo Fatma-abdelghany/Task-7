@@ -28,7 +28,7 @@ class _CarouselSliderExState extends State<CarouselSliderEx> {
             itemBuilder: (BuildContext context, int index, int pageViewIndex) =>
                 buildSliderImage(index),
             options: CarouselOptions(
-              height: 200,
+              height: 160,
               viewportFraction: .9,
               padEnds: false,
               initialPage: 0,
