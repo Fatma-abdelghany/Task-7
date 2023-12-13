@@ -46,9 +46,10 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.red,
+                      height: 200,
+                      width: 200,
+                      //color: Colors.red,
+                      child: Image.asset("assets/images/Logo.png",fit: BoxFit.cover,),
                     ),
                     const SizedBox(
                       height: 20,

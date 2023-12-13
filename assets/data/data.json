@@ -37,5 +37,27 @@
         "title" : "Assets",
         "description" : "assets Category"
     }
-    ]
+    ],
+  "Ads": [
+    {
+      "id": "1",
+      "title": "For all your summer clothing needs",
+      "image": "https://m.media-amazon.com/images/I/61U-R3-znNL._AC_UL320_.jpg"
+    },
+    {
+      "id": "2",
+      "title": "For all your summer clothing needs",
+      "image": "https://m.media-amazon.com/images/I/81S-ekaE+vS._AC_UL320_.jpg"
+    },
+    {
+      "id": "3",
+      "title": "For all your summer clothing needs",
+      "image": "https://m.media-amazon.com/images/I/61hMQOHmEIL._AC_UL320_.jpg"
+    },
+    {
+      "id": "4",
+      "title": "For all your summer clothing needs",
+      "image": "https://m.media-amazon.com/images/I/81b9Eh286BL._AC_UL320_.jpg"
+    }
+  ]
 }

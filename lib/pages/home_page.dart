@@ -56,14 +56,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             HeadlineWidget(title: 'Categories'),
             CategoriesRowHome(),
-            CarouselSliderEx(
-              isForProduct: false,
-                imageUrls: [
-              "https://m.media-amazon.com/images/I/81S-ekaE+vS._AC_UL320_.jpg",
-              "https://m.media-amazon.com/images/I/61hMQOHmEIL._AC_UL320_.jpg",
-              "https://m.media-amazon.com/images/I/81b9Eh286BL._AC_UL320_.jpg",
-              "https://m.media-amazon.com/images/I/61U-R3-znNL._AC_UL320_.jpg"
-            ], onBtnPressed: () {}),
+            buildCarouselSliderEx(),
       //=======================================================
             buildProductGrid(),
 
@@ -72,6 +65,25 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  Widget buildCarouselSliderEx() {
+    return Consumer<ProductProvider>(builder: (ctx,productProvider,child){
+      if(productProvider.products.isEmpty){
+        return Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: CircularProgressIndicator(),
+        );
+      }else{
+      return CarouselSliderEx(
+          isForProduct: false,
+          imageUrls:productProvider.Ads  ,
+          onBtnPressed: () {});
+    }
+    }
+      )
+      ;
+
   }
 
 

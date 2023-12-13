@@ -4,9 +4,11 @@ import 'package:flutter/services.dart';
 import 'package:shopify_app/models/category.model.dart';
 import 'package:shopify_app/models/product.model.dart';
 
+import '../models/ad.dart';
+
 class DataSeeder {
   static Map _data = {};
-
+  static List<AdData> Ads=[];
   static List<Product> products = [];
   static List<CategoryData> categories = [];
 
@@ -20,5 +22,8 @@ class DataSeeder {
     categories = (_data['categories'] as List)
         .map((e) => CategoryData.fromJson(e))
         .toList();
+
+    Ads= (_data["Ads"] as List).map((e) => AdData.fromJson(e)).toList();
+
   }
 }

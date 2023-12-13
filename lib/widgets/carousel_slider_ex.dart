@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:shopify_app/widgets/custom_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../models/ad.dart';
+
 class CarouselSliderEx extends StatefulWidget {
   const CarouselSliderEx(
       {required this.imageUrls, required this.isForProduct,required this.onBtnPressed, super.key});
 
-  final List<String> imageUrls;
+  final List<AdData> imageUrls;
   final void Function() onBtnPressed;
   final bool isForProduct;
 
@@ -49,13 +51,7 @@ class _CarouselSliderExState extends State<CarouselSliderEx> {
         const SizedBox(
           height: 5,
         ),
-        AnimatedSmoothIndicator(
-          activeIndex: index,
-          count: widget.imageUrls.length,
-          effect: const ExpandingDotsEffect(
-            activeDotColor: Colors.orange,
-          ),
-        )
+
       ],
     );
   }
@@ -72,7 +68,7 @@ class _CarouselSliderExState extends State<CarouselSliderEx> {
         child:
         widget.isForProduct?
         Image.network(
-          widget.imageUrls[index],
+          widget.imageUrls[index].image.toString(),
           height: 200,
           width: double.infinity,
           fit: BoxFit.cover,
@@ -81,7 +77,7 @@ class _CarouselSliderExState extends State<CarouselSliderEx> {
         Stack(
           children: [
             Image.network(
-              widget.imageUrls[index],
+              widget.imageUrls[index].image.toString(),
               height: 200,
               width: double.infinity,
               fit: BoxFit.cover,
